@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensajitos</title>
+     <style>
+          nav {
+               width:100%;
+               text-align: center;
+               background-color: #FFFFFF
+                 }
+          label {
+               padding: 20px;
+               font-size: 2em;
+                 }
+           body {
+               background-image: url(fondo.jpeg);
+               background-size: cover
+                 } 
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #5F0775;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+                 }
+
+    </style>
+</head>
+<body>
+         
+         <nav>
+            <label>Mensajitos para mi viejita ♥️</label>
+            <label> <a target="_blank" href="https://www.youtube.com/watch?v=emJf6abkPqs">para escuchar</a></label>
+            <label></label>
+         </nav>
+
+    <button id="miBoton">presiona guapa</button>
+
+    <script>
+         // Arreglo con las opciones de mensaje
+        var mensajes = [
+            "Juntos somos mejores",
+            "Tu potencial es infinito, atrévete a explorarlo",
+            "No tengas miedo de fallar, ten miedo de no intentarlo",
+            "Te quiero",
+            "Sonrie preciosa",
+            "Mi viejita",
+        ];
+
+        // Función para obtener un mensaje aleatorio del arreglo
+        function obtenerMensajeAleatorio() {
+            var indice = Math.floor(Math.random() * mensajes.length);
+            return mensajes[indice];
+        }
+
+        document.getElementById("miBoton").addEventListener("click", function() {
+            var mensajeAleatorio = obtenerMensajeAleatorio();
+            alert(mensajeAleatorio);
+        });
+    </script>
+
+</body>
+</html>
